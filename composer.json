@@ -14,9 +14,10 @@
         "php": ">=7.0",
         "illuminate/support": "~5.5",
         "illuminate/database": "~5.5"
-    }"require-dev": {
-    "phpunit/phpunit": "~6.0"
-},
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
     "autoload": {
         "psr-4": {
             "Zitech\\LaravelAuditableUuid\\": "src"
