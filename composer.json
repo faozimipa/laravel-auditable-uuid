@@ -1,6 +1,6 @@
 {
     "name": "zitech/laravel-auditable-uuid",
-    "description": "A simple laravel auditing table package for eloquent model",
+    "description": "A simple laravel auditing table uuid package for eloquent model",
     "type": "laravel-package",
     "license": "MIT",
     "authors": [
