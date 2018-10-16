@@ -9,7 +9,7 @@
             "email": "faozimipa@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "1.0-dev",
     "require": {
         "php": ">=7.0",
         "illuminate/support": "~5.5",
