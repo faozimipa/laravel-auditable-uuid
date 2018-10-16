@@ -1,0 +1,43 @@
+{
+    "name": "zitech/laravel-auditable-uuid",
+    "description": "A simple laravel auditing table package for eloquent model",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FAOZI",
+            "email": "faozimipa@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "~5.5",
+        "illuminate/database": "~5.5"
+    }"require-dev": {
+    "phpunit/phpunit": "~6.0"
+},
+    "autoload": {
+        "psr-4": {
+            "Zitech\\LaravelAuditableUuid\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zitech\\LaravelAuditableUuid\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "dev"
+        },
+        "laravel": {
+            "providers": [
+                "Zitech\\LaravelAuditableUuid\\AuditableServiceProvider"
+            ]
+        }
+    }
+}
