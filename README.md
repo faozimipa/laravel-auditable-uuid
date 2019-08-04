@@ -9,7 +9,7 @@ composer require zitech/laravel-auditable-uuid
 
 ## Publish 
 ```php
-php artisan publish
+php artisan vendor:publish
 ```
 
 set ziAuditable.php set 'useUuid' => true,

@@ -24,14 +24,13 @@ class AuditableServiceProvider extends ServiceProvider
         });
     }
 
-     /**
-     * Setup the files for vendor:publish
-     * @return void
-     */
-    protected function publishFiles(): void
+
+    public function boot()
     {
         $this->publishes([
             __DIR__ . '/Config/ziAuditable.php' => config_path('ziAuditable.php'),
         ]);
     }
+    
+    
 }
