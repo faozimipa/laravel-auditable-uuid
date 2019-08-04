@@ -30,7 +30,7 @@ trait AuditableTrait
             parent::boot();
 
             static::creating(function ($model) {
-                $model->{$model->getKeyName()} = Uuid::uuid4()->string;
+                $model->{$model->getKeyName()} =  Uuid::uuid4()->toString();
             });
         }
     }
