@@ -7,6 +7,12 @@
 composer require zitech/laravel-auditable-uuid
 ```
 
+## Publish 
+```php
+php artisan publish
+```
+
+set ziAuditable.php set 'useUuid' => true,
 
 ## Usage
 ```php
@@ -26,6 +32,7 @@ Schema::create('users', function (Blueprint $table) {
 });
 ```
 
+
  on User model
 
 ``` php
@@ -36,6 +43,7 @@ use Zitech\LaravelAuditableUuid\AuditableTrait;
 class User extends Model
 {
     use AuditableTrait;
+    public $incrementing = false; 
 	...................
 }
 ```
