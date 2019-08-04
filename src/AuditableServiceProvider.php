@@ -23,4 +23,15 @@ class AuditableServiceProvider extends ServiceProvider
             $this->dropColumn(['created_by', 'updated_by']);
         });
     }
+
+     /**
+     * Setup the files for vendor:publish
+     * @return void
+     */
+    protected function publishFiles(): void
+    {
+        $this->publishes([
+            __DIR__ . '/Config/ziAuditable.php' => config_path('ziAuditable.php'),
+        ]);
+    }
 }

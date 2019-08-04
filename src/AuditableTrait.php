@@ -3,6 +3,7 @@
 namespace Zitech\LaravelAuditableUuid;
 
 use App\User;
+use Ramsey\Uuid\Uuid;
 use Illuminate\Database\Eloquent\Builder;
 
 trait AuditableTrait
@@ -15,6 +16,23 @@ trait AuditableTrait
     public static function bootAuditableTrait()
     {
         static::observe(new AuditableTraitObserver);
+    }
+
+
+    /**
+     * Boot function from laravel.
+     */
+    protected static function boot()
+    {
+       $isUseUuid = config('ziAuditable.useUuid', false);
+       
+       if ($isUseUuid == true) {
+            parent::boot();
+
+            static::creating(function ($model) {
+                $model->{$model->getKeyName()} = Uuid::uuid4()->string;
+            });
+        }
     }
 
     /**
@@ -78,7 +96,7 @@ trait AuditableTrait
      */
     public function getUserInstance()
     {
-        $class = config('auth.providers.users.model', User::class);
+        $class = config('ziAuditable.users.model', User::class);
 
         return new $class;
     }
